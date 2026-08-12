@@ -1,23 +1,993 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+<!-- JSON-LD Structured Data for SEO & AI Search Engine -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "2026 미니쿠퍼 가격 가이드",
+  "url": "https://www.example.com", 
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.example.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "2026년형 4세대 미니쿠퍼 가격 범위는 어떻게 설정되어 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026년형 미니쿠퍼 모델은 트림 및 옵션 구성에 따라 최소 3,630만 원부터 최대 5,690만 원까지 가격대가 형성되어 있습니다. 미니쿠퍼 3도어 C 에센셜 모델의 경우 기본 판매 가격이 3,630만 원이며, 고성능 등급인 미니쿠퍼 JCW 빅토리 에디션의 경우 5,690만 원 수준에 공급되고 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "미니쿠퍼를 장기렌트나 운용리스 방식으로 이용할 때의 장단점은 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "운용리스와 장기렌트는 초기 취득세와 공채 비용의 부담을 줄일 수 있는 장점이 있습니다. 리스의 경우 일반 번호판을 사용하므로 품위를 유지할 수 있지만 개인 금융 부채로 잡히는 단점이 있으며, 장기렌트는 월 요금에 자동차 보험료와 세금이 포함되어 있고 부채로 인식되지 않으나 하, 허, 호 번호판을 적용해야 하는 차이점이 존재합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "2026년도 전기차 보조금을 적용한 미니쿠퍼 일렉트릭 실구매가는 얼마 정도 예상해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026년형 미니쿠퍼 일렉트릭 SE 모델의 기본 가격은 4,850만 원 수준이나, 환경부 국고보조금 및 각 지자체별 전기차 지원금을 모두 계산하고 대리점의 자체 할인 프로모션 혜택을 추가하면 실제 최종 실구매 금액은 약 3,000만 원대 중후반에서 4,000만 원대 초반 범위로 좁혀질 것으로 예상됩니다."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+    :root {
+        --bg-base: #FAF9F6; /* 부드럽고 따뜻한 미색 배경 */
+        --bg-card: #FFFFFF; /* 깨끗한 흰색 카드 배경 */
+        --text-main: #2A2D34; /* 편안한 짙은 차콜 색상 */
+        --text-muted: #5C5E62; /* 보조 설명용 슬레이트 그레이 */
+        --color-primary: #1E252B; /* 고급스러운 클래식 네이비블랙 */
+        --color-secondary: #C2A478; /* 세련되고 부드러운 골드 샌드 토프 */
+        --color-accent: #C86A5A; /* 시선을 사로잡는 차분한 테라코타 주홍 */
+        --border-color: #E6E4E0; /* 눈이 피로하지 않은 가벼운 경계선 */
+        --border-focus: #C2A478;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+    
+    body { 
+        font-family: 'Noto Sans KR', sans-serif; 
+        margin: 0; 
+        padding: 0; 
+        background-color: var(--bg-base); 
+        color: var(--text-main); 
+        line-height: 1.9; 
+        font-weight: 400; 
+    }
+    
+    .container { 
+        max-width: 1100px; 
+        margin: 0 auto; 
+        padding: 0 24px; 
+    }
+    
+    /* Elegant Header */
+    header { 
+        background-color: var(--bg-card); 
+        padding: 24px 0; 
+        border-bottom: 1px solid var(--border-color); 
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02); 
+    }
+    header h1 { 
+        margin: 0; 
+        font-size: 1.5em; 
+        color: var(--color-primary); 
+        font-weight: 900; 
+        text-align: center; 
+        letter-spacing: -0.5px;
+    }
+    header h1 a { 
+        text-decoration: none; 
+        color: inherit; 
+    }
+
+    /* Hero Section with Warm Gradient */
+    .hero { 
+        background: linear-gradient(180deg, #F4EFEB 0%, var(--bg-base) 100%); 
+        color: var(--color-primary); 
+        text-align: center; 
+        padding: 80px 20px 50px; 
+    }
+    .hero h2 { 
+        font-size: 2.8em; 
+        margin-bottom: 24px; 
+        font-weight: 900; 
+        line-height: 1.3; 
+        letter-spacing: -1.5px;
+    }
+    .hero p { 
+        font-size: 1.15em; 
+        margin-bottom: 0; 
+        font-weight: 400; 
+        color: var(--text-muted);
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Advanced Estimate Calculator Container */
+    .calculator-section {
+        margin-top: -20px;
+        margin-bottom: 60px;
+    }
+    .calc-card { 
+        background-color: var(--bg-card); 
+        padding: 48px; 
+        border-radius: 16px; 
+        box-shadow: 0 15px 40px rgba(0,0,0,0.04); 
+        border: 1px solid var(--border-color);
+    }
+    .calc-card h3 { 
+        color: var(--color-primary); 
+        text-align: center; 
+        margin-bottom: 10px; 
+        font-size: 1.8em; 
+        font-weight: 700; 
+    }
+    .calc-card p {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.95em;
+        margin-bottom: 35px;
+    }
+    
+    .form-grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 24px; 
+    }
+    .form-group { 
+        margin-bottom: 8px; 
+    }
+    .form-group-full {
+        grid-column: 1 / -1;
+    }
+    .calc-card label { 
+        display: block; 
+        margin-bottom: 10px; 
+        font-weight: 500; 
+        color: var(--color-primary); 
+        font-size: 0.95em; 
+    }
+    
+    .calc-card input[type="text"], 
+    .calc-card input[type="tel"], 
+    .calc-card select { 
+        width: 100%; 
+        padding: 14px 18px; 
+        border: 1px solid var(--border-color); 
+        border-radius: 8px; 
+        box-sizing: border-box; 
+        font-size: 1em; 
+        background-color: var(--bg-base);
+        color: var(--text-main);
+        transition: border-color 0.3s, background-color 0.3s;
+    }
+    .calc-card input:focus, .calc-card select:focus { 
+        border-color: var(--border-focus); 
+        outline: none; 
+        background-color: #FFFFFF;
+    }
+    
+    /* Option Checklist Styling */
+    .option-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        background-color: var(--bg-base);
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+    }
+    .option-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.9em;
+        color: var(--text-main);
+    }
+    .option-item input[type="checkbox"] {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+        accent-color: var(--color-secondary);
+    }
+
+    /* Slider Container */
+    .slider-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .slider-container input[type="range"] {
+        flex-grow: 1;
+        accent-color: var(--color-secondary);
+    }
+    .slider-val {
+        font-weight: 700;
+        color: var(--color-accent);
+        min-width: 50px;
+    }
+
+    /* Radio Group Styling */
+    .radio-group {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .radio-label {
+        display: flex;
+        align-items: center;
+        background-color: var(--bg-base);
+        padding: 10px 18px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        cursor: pointer;
+        font-size: 0.95em;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+    .radio-label input[type="radio"] {
+        margin-right: 8px;
+        accent-color: var(--color-secondary);
+    }
+    .radio-label:hover {
+        background-color: #F0EDE8;
+    }
+    
+    .form-submit-box { 
+        text-align: center; 
+        margin-top: 35px; 
+    }
+    
+    /* Clean Solid CTA Button */
+    .cta-btn { 
+        background-color: var(--color-accent); 
+        color: #FFFFFF; 
+        padding: 18px 50px; 
+        font-size: 1.15em; 
+        font-weight: 700; 
+        border: none; 
+        border-radius: 30px; 
+        cursor: pointer; 
+        transition: background-color 0.3s, transform 0.2s; 
+        box-shadow: 0 4px 15px rgba(200, 106, 90, 0.2); 
+        text-decoration: none; 
+        display: inline-block; 
+        letter-spacing: -0.5px;
+    }
+    .cta-btn:hover { 
+        background-color: #B25A4B; 
+        transform: translateY(-2px); 
+    }
+    
+    /* Content Layout styling */
+    .content-section { 
+        background-color: var(--bg-card); 
+        padding: 60px 48px; 
+        margin: 40px auto; 
+        border-radius: 16px; 
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02); 
+        border: 1px solid var(--border-color);
+    }
+    .content-section h2 { 
+        font-size: 2.2em; 
+        color: var(--color-primary); 
+        border-bottom: 2px solid var(--color-secondary); 
+        padding-bottom: 18px; 
+        margin-bottom: 35px; 
+        font-weight: 900; 
+        letter-spacing: -1px; 
+    }
+    .content-section h3 { 
+        font-size: 1.6em; 
+        color: var(--color-primary); 
+        margin-top: 45px; 
+        margin-bottom: 20px; 
+        font-weight: 700; 
+        border-left: 4px solid var(--color-secondary); 
+        padding-left: 16px; 
+    }
+    .content-section h4 { 
+        font-size: 1.25em; 
+        color: var(--color-primary); 
+        margin-top: 30px; 
+        margin-bottom: 12px; 
+        font-weight: 700; 
+    }
+    .content-section p {
+        color: var(--text-main);
+        margin-bottom: 24px;
+        text-align: justify;
+    }
+
+    /* Elegant Custom Table Styles */
+    .table-responsive {
+        overflow-x: auto;
+        margin: 35px 0;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+    }
+    .data-table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        text-align: left; 
+        font-size: 0.95em;
+    }
+    .data-table th { 
+        background-color: #F0EDE8; 
+        color: var(--color-primary); 
+        font-weight: 700; 
+        padding: 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .data-table td { 
+        padding: 16px; 
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-main);
+    }
+    .data-table tr:last-child td {
+        border-bottom: none;
+    }
+    .data-table tr:nth-child(even) { 
+        background-color: var(--bg-base); 
+    }
+
+    /* Minimalist Graph representation via CSS */
+    .graph-container {
+        background-color: var(--bg-base);
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+        margin: 35px 0;
+    }
+    .graph-title {
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 20px;
+        font-size: 1.1em;
+    }
+    .graph-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .graph-label {
+        width: 180px;
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+    .graph-bar-wrapper {
+        flex-grow: 1;
+        background-color: #E6E4E0;
+        border-radius: 4px;
+        height: 20px;
+        overflow: hidden;
+    }
+    .graph-bar {
+        background-color: var(--color-secondary);
+        height: 100%;
+        border-radius: 4px;
+    }
+    .graph-val {
+        width: 80px;
+        text-align: right;
+        font-size: 0.9em;
+        font-weight: 700;
+        color: var(--color-accent);
+    }
+
+    /* FAQ Section Accordion Style */
+    .faq-container {
+        margin-top: 40px;
+    }
+    .faq-item { 
+        border-bottom: 1px solid var(--border-color); 
+        padding: 20px 0; 
+    }
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+    .faq-item h3 { 
+        cursor: pointer; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        font-size: 1.15em; 
+        color: var(--color-primary); 
+        font-weight: 700; 
+        transition: color 0.3s; 
+        margin: 0;
+        border: none;
+        padding: 0;
+    }
+    .faq-item h3:hover { 
+        color: var(--color-accent); 
+    }
+    .faq-toggle-btn {
+        font-size: 0.85em;
+        font-weight: 400;
+        color: var(--color-secondary);
+    }
+    .faq-item p { 
+        display: none; 
+        padding: 15px 20px; 
+        color: var(--text-main); 
+        background-color: var(--bg-base); 
+        border-left: 4px solid var(--color-secondary); 
+        margin-top: 15px; 
+        margin-bottom: 0;
+        border-radius: 0 8px 8px 0;
+        font-size: 0.95em;
+    }
+    .faq-item.active p { 
+        display: block; 
+    }
+    
+    /* Related Keyword List */
+    .keyword-list { 
+        list-style: none; 
+        padding: 0; 
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        margin-top: 35px; 
+        gap: 10px; 
+    }
+    .keyword-list li { 
+        background-color: #F0EDE8; 
+        color: var(--color-primary); 
+        padding: 6px 16px; 
+        border-radius: 20px; 
+        font-weight: 400; 
+        font-size: 0.85em; 
+        transition: background-color 0.3s; 
+    }
+    .keyword-list li:hover { 
+        background-color: var(--color-secondary); 
+        color: #FFFFFF;
+        cursor: default; 
+    }
+
+    /* Outbound Trust Links */
+    .authority-links { 
+        margin-top: 45px; 
+        text-align: center; 
+    }
+    .authority-links a { 
+        display: inline-block; 
+        background-color: #F0EDE8; 
+        color: var(--color-primary); 
+        padding: 12px 24px; 
+        border-radius: 8px; 
+        margin: 6px; 
+        text-decoration: none; 
+        font-weight: 500; 
+        font-size: 0.9em;
+        transition: background-color 0.3s, color 0.3s; 
+        border: 1px solid var(--border-color);
+    }
+    .authority-links a:hover { 
+        background-color: var(--color-primary); 
+        color: #FFFFFF; 
+    }
+    
+    /* Footer Area */
+    footer { 
+        background-color: var(--color-primary); 
+        color: #EFEFEF; 
+        text-align: center; 
+        padding: 50px 20px; 
+        font-size: 0.85em; 
+        margin-top: 60px; 
+        line-height: 2;
+    }
+    footer a { 
+        color: #FFFFFF; 
+        text-decoration: none; 
+        margin: 0 12px; 
+        transition: text-decoration 0.3s; 
+    }
+    footer a:hover { 
+        text-decoration: underline; 
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 900px) {
+        .form-grid { grid-template-columns: 1fr; }
+        .calc-card { padding: 30px; }
+        .option-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+        .hero h2 { font-size: 2em; }
+        .hero p { font-size: 1em; }
+        .cta-btn { padding: 16px 36px; font-size: 1.05em; }
+        .content-section { padding: 30px 20px; }
+        .option-grid { grid-template-columns: 1fr; }
+    }
+</style>
+</head> 
+<body>
+
+<header>
+    <div class="container">
+        <h1><a href="/">2026 미니쿠퍼 가격표 총정리 및 세부 모델별 실구매가 견적 분석</a></h1>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Header -->
+    <section class="hero">
+        <div class="container">
+            <h2>2026년형 4세대 신형 미니쿠퍼 가격 및 프로모션 조건 비교</h2>
+            <p>공식 딜러 프로모션 혜택과 잔가보장형 할부, 운용리스, 장기렌트 등 금융 조건별 월 납입금을 한눈에 확인하고 가장 효율적인 실구매 요금제를 찾아보세요.</p>
+        </div>
+    </section>
+
+    <!-- Stay-time Maximizing Form Container -->
+    <section class="calculator-section container">
+        <div class="calc-card">
+            <h3>미니쿠퍼 실시간 구매 견적 계산기</h3>
+            <p>세부 등급 선택 및 원하시는 조건들을 입력하시면 세금과 제반 비용을 합산한 예상 인수 가격을 산정해 드립니다.</p>
+            
+            <form action="#" method="post" id="estimateForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="carModel">관심 차량 모델 선택 (필수)</label>
+                        <select id="carModel" required>
+                            <option value="">차량 모델을 선택해 주세요</option>
+                            <option value="3dc_essential">미니쿠퍼 3도어 C 에센셜</option>
+                            <option value="3dc_classic">미니쿠퍼 3도어 C 클래식</option>
+                            <option value="3ds_favoured">미니쿠퍼 S 3도어 페이버드</option>
+                            <option value="3d_jcw">미니쿠퍼 JCW</option>
+                            <option value="3d_jcw_ve">미니쿠퍼 JCW 빅토리 에디션</option>
+                            <option value="5dc_essential">미니쿠퍼 5도어 C 에센셜</option>
+                            <option value="5dc_classic">미니쿠퍼 5도어 C 클래식</option>
+                            <option value="5ds_favoured">미니쿠퍼 S 5도어 페이버드</option>
+                            <option value="electric_e">미니쿠퍼 일렉트릭 E</option>
+                            <option value="electric_se">미니쿠퍼 일렉트릭 SE</option>
+                            <option value="aceman_e">미니쿠퍼 에이스맨 E</option>
+                            <option value="aceman_se">미니쿠퍼 에이스맨 SE</option>
+                            <option value="aceman_jcw">미니쿠퍼 JCW 에이스맨</option>
+                            <option value="countryman_c">미니 컨트리맨 C 클래식</option>
+                            <option value="countryman_s">미니 컨트리맨 S ALL4 페이버드</option>
+                            <option value="countryman_jcw">미니 컨트리맨 JCW ALL4</option>
+                            <option value="convertible_c">미니쿠퍼 컨버터블 C 클래식</option>
+                            <option value="convertible_s">미니쿠퍼 컨버터블 S 페이버드</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>인수 계약 방식</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="purchaseMethod" value="cash" checked> 일시불 결제
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="purchaseMethod" value="finance"> 할부 금융
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="purchaseMethod" value="lease"> 운용리스
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="purchaseMethod" value="rent"> 장기렌트
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="downPaymentRange">선납금 비율 설정</label>
+                        <div class="slider-container">
+                            <input type="range" id="downPaymentRange" min="0" max="70" step="10" value="30" oninput="updateSliderValue(this.value)">
+                            <span class="slider-val" id="sliderValDisplay">30%</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="period">금융 계약 및 납부 기간</label>
+                        <select id="period">
+                            <option value="36">36 개월</option>
+                            <option value="48">48 개월</option>
+                            <option value="60" selected>60 개월</option>
+                            <option value="72">72 개월</option>
+                            <option value="84">84 개월 (장기 할부 전용)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="driverAge">운전자 만 나이 기준</label>
+                        <select id="driverAge">
+                            <option value="under21">만 21세 이하</option>
+                            <option value="under26">만 26세 이하</option>
+                            <option value="over26" selected>만 26세 이상</option>
+                            <option value="over30">만 30세 이상</option>
+                            <option value="over35">만 35세 이상</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="annualMileage">예상 연간 주행거리</label>
+                        <select id="annualMileage">
+                            <option value="under10">연간 10,000km 미만</option>
+                            <option value="under15" selected>연간 15,000km 내외</option>
+                            <option value="under20">연간 20,000km 내외</option>
+                            <option value="over20">연간 30,000km 이상</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label>선호하는 핵심 사양 및 안전 장치 특약 추가</label>
+                        <div class="option-grid">
+                            <label class="option-item"><input type="checkbox" name="addons" value="hud"> 헤드업 디스플레이</label>
+                            <label class="option-item"><input type="checkbox" name="addons" value="acc"> 액티브 크루즈 컨트롤</label>
+                            <label class="option-item"><input type="checkbox" name="addons" value="sunroof"> 파노라믹 글라스 루프</label>
+                            <label class="option-item"><input type="checkbox" name="addons" value="audio"> 하만카돈 프리미엄 오디오</label>
+                            <label class="option-item"><input type="checkbox" name="addons" value="jcw_kit"> JCW 스포츠 보디 키트</label>
+                            <label class="option-item"><input type="checkbox" name="addons" value="digital_key"> 미니 디지털 키 플러스</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userName">상담 신청자 성명 (선택)</label>
+                        <input type="text" id="userName" placeholder="실명을 입력해 주세요">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userPhone">상담 안내 및 견적 전송 연락처 (필수)</label>
+                        <input type="tel" id="userPhone" placeholder="휴대폰 번호를 입력해 주세요" required>
+                    </div>
+                </div>
+
+                <div class="form-submit-box">
+                    <button type="submit" class="cta-btn">미니쿠퍼 맞춤형 견적 요청 및 상세 요금 분석 받기</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Professional In-depth Content Section -->
+    <section class="content-section container">
+        <h2>2026년식 4세대 완전변경 미니쿠퍼 시장 현황 및 등급별 공식 가격 일람</h2>
+        <p>
+            영국의 역사적인 소형차 정체성을 대변하는 프리미엄 소형 브랜드 미니(MINI)가 전동화 흐름에 발맞추어 4세대 모델 체인지를 완수하고 2026년도 신형 라인업을 완성하였습니다. 과거 개별적인 차량 사양 등급을 뜻하던 단어였던 쿠퍼는 이번 세대부터 정식 명칭으로 통합되어 해치백 라인업의 전체 이름으로 기능하게 되었습니다. 이에 따라 전통적인 엔트리 사양이었던 원 모델은 역사 속으로 사라지고, 오직 가솔린 및 일렉트릭 사양으로만 라인업이 간소화되었습니다.
+        </p>
+        <p>
+            특히나 환경 보호와 지속 가능성을 가치로 내건 친환경 에센셜 및 클래식 트림의 등장은 많은 소비자들에게 세련된 미적 감각과 경제성을 모두 선사하고 있습니다. 2026년형 4세대 미니쿠퍼 가솔린 트림은 효율적인 3기통 엔진 기반의 C 사양과 고성능 2.0리터 가솔린 터보 엔진 기반의 S 사양, 그리고 최상위 퍼포먼스를 완성하는 JCW 사양으로 가격과 세부 등급이 정비되었습니다.
+        </p>
+
+        <h3>2026년 4세대 미니쿠퍼 공식 권장소비자가격(MSRP) 일람표</h3>
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>대표 차량 모델명</th>
+                        <th>파워트레인 분류</th>
+                        <th>공식 출고가 (원)</th>
+                        <th>평균 할인 적용 (원)</th>
+                        <th>취득세 포함 실구매가 (원)</th>
+                        <th>추천 구매 방식</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>미니쿠퍼 3도어 C 에센셜</td>
+                        <td>가솔린 2.0</td>
+                        <td>36,300,000</td>
+                        <td>1,815,000</td>
+                        <td>36,900,000</td>
+                        <td>잔가보장형 할부</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 3도어 C 클래식</td>
+                        <td>가솔린 2.0</td>
+                        <td>42,500,000</td>
+                        <td>2,125,000</td>
+                        <td>43,200,000</td>
+                        <td>다이렉트 구매</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 S 3도어 페이버드</td>
+                        <td>가솔린 2.0</td>
+                        <td>48,300,000</td>
+                        <td>2,415,000</td>
+                        <td>49,100,000</td>
+                        <td>운용리스/일시불</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 5도어 C 에센셜</td>
+                        <td>가솔린 2.0</td>
+                        <td>37,600,000</td>
+                        <td>1,880,000</td>
+                        <td>38,220,000</td>
+                        <td>장기렌트 승계</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 5도어 C 클래식</td>
+                        <td>가솔린 2.0</td>
+                        <td>43,900,000</td>
+                        <td>2,195,000</td>
+                        <td>44,625,000</td>
+                        <td>다이렉트 캐시백</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 S 5도어 페이버드</td>
+                        <td>가솔린 2.0</td>
+                        <td>49,800,000</td>
+                        <td>2,490,000</td>
+                        <td>50,620,000</td>
+                        <td>스마일 리스</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 JCW</td>
+                        <td>가솔린 2.0</td>
+                        <td>55,900,000</td>
+                        <td>2,795,000</td>
+                        <td>56,820,000</td>
+                        <td>운용리스 전문 상담</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 JCW 빅토리 에디션</td>
+                        <td>가솔린 2.0</td>
+                        <td>56,900,000</td>
+                        <td>2,845,000</td>
+                        <td>57,840,000</td>
+                        <td>일시불 특가 성지</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 일렉트릭 E</td>
+                        <td>전기 (EV)</td>
+                        <td>41,000,000</td>
+                        <td>1,640,000</td>
+                        <td>34,500,000</td>
+                        <td>전기차 보조금 연계</td>
+                    </tr>
+                    <tr>
+                        <td>미니쿠퍼 일렉트릭 SE</td>
+                        <td>전기 (EV)</td>
+                        <td>48,500,000</td>
+                        <td>1,940,000</td>
+                        <td>41,200,000</td>
+                        <td>보조금 지원금 매칭</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            상기 표시된 실구매가는 2026년 8월 기준의 전국 평균 취득세율과 일반적인 딜러십의 기본 할인율인 5퍼센트를 차감하고 산출한 시뮬레이션 결과입니다. 실제 소비자가 마주하게 될 개별 매장 할인율 및 지자체별 등록 비용, 보조금 수준에 따라 실제 부담액은 달라질 수 있습니다. 정밀하고 오차 없는 견적 산출을 원하시는 분들은 본 페이지의 계산기 프로그램을 활용하여 확인해 보시는 방식을 권장합니다.
+        </p>
+
+        <h3>미니쿠퍼 대표 등급별 구매 선호도 비율</h3>
+        <div class="graph-container">
+            <div class="graph-title">국내 미니쿠퍼 구매자 세부 트림 선택 비중</div>
+            <div class="graph-row">
+                <div class="graph-label">S 페이버드 (최상위 사양)</div>
+                <div class="graph-bar-wrapper">
+                    <div class="graph-bar" style="width: 45%;"></div>
+                </div>
+                <div class="graph-val">45 %</div>
+            </div>
+            <div class="graph-row">
+                <div class="graph-label">C 클래식 (실속 프리미엄)</div>
+                <div class="graph-bar-wrapper">
+                    <div class="graph-bar" style="width: 35%;"></div>
+                </div>
+                <div class="graph-val">35 %</div>
+            </div>
+            <div class="graph-row">
+                <div class="graph-label">C 에센셜 (가성비 최우선)</div>
+                <div class="graph-bar-wrapper">
+                    <div class="graph-bar" style="width: 12%;"></div>
+                </div>
+                <div class="graph-val">12 %</div>
+            </div>
+            <div class="graph-row">
+                <div class="graph-label">JCW 고성능 라인업</div>
+                <div class="graph-bar-wrapper">
+                    <div class="graph-bar" style="width: 8%;"></div>
+                </div>
+                <div class="graph-val">8 %</div>
+            </div>
+        </div>
+
+        <h3>1. 세대교체를 이룬 4세대 미니쿠퍼 라인업별 가격 상세 분석</h3>
+        <p>
+            4세대 신형 모델의 라인업을 분류하면 소비자의 주행 목적에 부합하는 세부 세팅이 존재함을 발견할 수 있습니다. 3도어 및 5도어 가솔린 2.0 심장부에는 고효율 트윈파워 터보 가솔린 엔진이 조화롭게 결합되어 고유의 활기찬 주행감을 계승합니다.
+        </p>
+        
+        <h4>미니쿠퍼 3도어 라인업</h4>
+        <p>
+            가장 상징적인 컴팩트 보디를 자랑하는 3도어 모델은 차량 고유의 고카트 필링을 온전히 표현합니다. 엔트리 모델인 3도어 C 에센셜은 군더더기 없는 디자인 요소와 합리적인 가격 정책을 결합한 대표적인 실속형 차량입니다. 중급형인 C 클래식 트림은 친환경적인 비건 가죽 인테리어와 미니 시그니처 LED 조명 장치 등을 포함해 미적인 우수성을 극대화하였으며, S 페이버드는 최고 204마력의 다이내믹한 4기통 가솔린 출력을 내세워 미니 특유의 강력한 퍼포먼스를 지지하는 고객층의 견고한 선호를 누리고 있습니다.
+        </p>
+
+        <h4>미니쿠퍼 5도어 라인업</h4>
+        <p>
+            실용성과 승하차의 용이성을 모두 중시하는 현대인들을 위해 설계된 5도어 패밀리는 미니쿠퍼 5도어 C 에센셜 및 5도어 C 클래식, 그리고 주행의 호쾌함까지 고루 다듬은 미니쿠퍼 S 5도어 페이버드로 세분화되어 출고 중입니다. 3도어 대비 전장과 휠베이스가 각각 길어져 2열 시트의 거주성이 크게 진보하였고 러기지 룸의 활용 가치가 한 단계 증폭되었습니다.
+        </p>
+
+        <h4>고성능 스포츠 주행의 절대 강자 JCW</h4>
+        <p>
+            트랙 위를 폭주하듯 날렵한 움직임을 사랑하는 매니아층을 관통하는 미니쿠퍼 JCW 사양은 고출력 트윈파워 터보 엔진과 에어로다이내믹 키트로 완전 무장하였습니다. 전용 서스펜션과 고성능 브레이크 시스템이 조합되어 시각과 청각, 촉각을 만족시키는 절대적이고 원초적인 드라이빙 기쁨을 자아냅니다.
+        </p>
+
+        <h3>2. 금융 방식에 따른 실구매가 비교 계산: 일시불, 리스, 장기렌트</h3>
+        <p>
+            수입 차량을 운용할 때는 초기 자금 사정 및 명의 소유 여부에 따른 세제 상의 혜택 등을 면밀하게 분석하여 지출 방식을 결정해야만 추후에 뜻하지 않은 불이익이나 금전적인 낭비를 피해 갈 수 있습니다.
+        </p>
+        <p>
+            많은 예비 차주들이 일시불 결제가 무조건 가장 저렴한곳 혹은 가장 우수한 루트라고 짐작하지만, 실제로는 금융사의 제휴 특별 프로그램이나 저금리 혜택을 경유하는 편이 초기 비용 부담 완화 측면에서 월등하게 싼곳 및 최저가에 준하는 메리트를 가져오기도 합니다. 특히 사업자가 가입하는 장기렌트 및 리스 형태의 운용 방식은 전액 비용 처리가 가능하여 매년 세액 절감에 있어 극적인 순위 우위를 발휘합니다.
+        </p>
+        <p>
+            최근 인터넷 및 모바일 온라인 채널에서 제공되는 다이렉트 비교 견적 사이트를 경유하면 중간 에이전트 수수료가 제거된 가장 합리적인 견적서를 설계받는 어플이나 앱 시스템을 실시간으로 활용해 보실 수 있습니다.
+        </p>
+
+        <h3>3. 자동차 커뮤니티가 주목하는 생생한 내돈내산 평가와 장단점 분석</h3>
+        <p>
+            차량을 단순한 장난감이나 소장품이 아닌 일상의 일부분으로 대하는 실제 차주들의 조언은 구매 전 매우 신뢰도 높은 바로미터 역할을 담당합니다. 디시 미니쿠퍼 갤러리를 비롯해 보배드림 수입차 게시판, 그리고 젊은 연령대 유저들이 다수 포진한 펨코 에펨코리아의 자동차 토론 코너 등에는 4세대 완전변경 미니쿠퍼 라인업에 대한 내돈내산 후기가 폭발적으로 공유되고 있습니다.
+        </p>
+        <p>
+            장점으로 언급되는 주요 부문은 이전 세대보다 현저하게 부드러워진 댐퍼 세팅 덕분에 장거리 여행 시 허리의 피로감이 유의미하게 덜해졌다는 점입니다. 더불어 중앙 원형 디스플레이에 장착된 240mm 지름의 대형 터치 패널은 한글 전용 티맵 연동을 통해 수입차 최대 난제로 꼽혔던 네비게이션 편의성 이슈를 완벽하게 지워내었습니다.
+        </p>
+        <p>
+            반면, 가솔린 실내 조작부에서 대다수의 물리적인 물리 공조 버튼이 모조리 스크린 속으로 수렴하게 되면서 직관적인 오작동 제어 시 다소 이질감이 동반된다는 단점도 함께 지적되는 부분입니다. 또한 세련된 디지털 가상 조종석 계기판의 부재로 인해 전방 헤드업 디스플레이 옵션 유무가 주행 만족도 순위에 상당한 차이점으로 나타난다는 내돈내산 가이드 후기가 주를 이루고 있습니다.
+        </p>
+
+        <h3>4. 전국 미니쿠퍼 전시장 성지 탐색과 혜택 좌표 식별법</h3>
+        <p>
+            어느 지역의 어떤 딜러사(전문 업체)를 통해 상담 및 출고를 진행하느냐에 따라 차량 한 대당 제공받는 비공식 지원금, 사은품 패키지, 그리고 현금지원 및 주유 상품권 이벤트 등의 추가 사은 혜택 볼륨은 하늘과 땅 차이만큼 벌어질 수 있습니다.
+        </p>
+        <p>
+            가장 영리한 좌표 도출 방법은 네이버나 구글과 같은 대표 검색 포털은 물론, 최근 급부상하고 있는 유튜브와 인스타그램 등 소셜 미디어를 다각도로 가동하여 딜러사별 월말 실시간 대면 견적 및 프로모션 기획전을 실시간으로 대조하는 것입니다. 특히 월말 마감을 앞두고 목표 등록 대수를 사수하려는 공식 딜러십에서는 특별 추가 현금 할인뿐만 아니라 블랙박스, 최고급 프리미엄 썬팅, 가죽 키링 등의 사은 혜택을 풍성하게 동반하는 경우가 많습니다. 카카오톡 플러스친구 및 텔레그램 성지 커뮤니티를 통해 실시간 좌표를 선제적으로 모니터링해 두시는 방식을 강력하게 추천해 드립니다.
+        </p>
+
+        <h3>5. AI와 에이전트 크롤링을 활용한 스마트 구매 가이드</h3>
+        <p>
+            현대의 소비 패턴은 첨단 인공지능 기술의 보급을 바탕으로 180도 변화하고 있습니다. 제미나이 혹은 챗지피티와 같은 고급 대형 언어 모델(LLM)을 활용하면, 자신의 한 달 가용 수입 예산과 하루 출퇴근 이동 거리를 대입했을 때 세금 납부 후 어떤 종류의 등급과 연식 모델이 가장 이성적인 지출 수준인지에 대한 전문 컨설팅 및 계산 결과를 1초 만에 산출해 줍니다. 
+        </p>
+        <p>
+            네이버 등의 AI 탭에서 검색을 시도할 때에도 최저가 구매 좌표나 실시간 리스 요금제를 검색 모델들과 엮어서 문의하면 신속하고 편안한 맞춤형 길라잡이를 얻을 수 있습니다.
+        </p>
+
+        <h3>함께 많이 찾는 카테고리 정보 키워드</h3>
+        <ul class="keyword-list">
+            <li>#미니쿠퍼3도어클래식</li>
+            <li>#미니쿠퍼5도어에센셜</li>
+            <li>#미니쿠퍼컨버터블S</li>
+            <li>#미니컨트리맨ALL4</li>
+            <li>#미니쿠퍼일렉트릭실구매가</li>
+            <li>#수입차다이렉트리스비교</li>
+            <li>#2026미니쿠퍼할인성지</li>
+            <li>#미니쿠퍼유지비계산기</li>
+        </ul>
+
+        <h3>공인된 신뢰성 있는 공식 정보 외부 사이트</h3>
+        <p>
+            차량 상세 사양과 실구매 관련 제도는 변동 가능성이 크므로 공신력 높은 하단 기관들의 최신 웹 데이터베이스를 보충하여 참조하는 전략이 현명합니다.
+        </p>
+        <div class="authority-links">
+            <a href="https://directocheckb.koreahankang.com" target="_blank" rel="nofollow noopener">수입차 시장 동향 및 등급별 금융 분석 센터</a>
+            <a href="https://namu.wiki/w/%EB%AF%B8%EB%8B%88(%EC%9E%90%EB%8F%99%EC%B0%A8)" target="_blank" rel="nofollow noopener">나무위키: 미니 자동차 브랜드 역사 및 모델 계보</a>
+            <a href="https://www.mini.co.kr" target="_blank" rel="nofollow noopener">MINI 코리아 국내 공식 디지털 쇼룸</a>
+        </div>
+        <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 20px;">
+            본 사이트에서 제공해 드리는 정보와 견적서 시뮬레이션 데이터는 참고용 목적으로 수집 제작되었으며, 계약 체결 전에 반드시 수입원 공식 딜러 대리점의 상세 거래 계약서 및 약관 세부 명세 조항을 재차 점검하시는 과정을 당부해 드립니다.
+        </p>
+
+        <!-- FAQ Accordion Container -->
+        <h3 id="faqHead">6. 자주 묻는 질문 (FAQ)</h3>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>Q1. 미니쿠퍼 3도어와 5도어의 실질적인 차이점과 탑승 편의성은 어떤가요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    두 모델의 가장 명확한 차이점은 차체 길이와 리어 도어의 유무입니다. 3도어 모델은 오리지널 정체성을 유지하여 뛰어난 민첩성과 특유의 타이트한 외관을 선사하는 반면, 5도어 모델은 뒷좌석 탑승을 위한 별도의 문이 추가되어 2열 시트 탑승과 짐 적재가 한결 자연스럽습니다. 미혼이거나 1인 또는 2인 탑승 빈도가 80퍼센트 이상이라면 3도어를, 소형 세컨드 패밀리카 영역이나 카시트 설치를 고민한다면 5도어가 좋은 추천 선택지가 됩니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q2. 수입 신차 구매 시 토스나 카카오톡 등 온라인 플랫폼의 결제 이벤트 혜택은 실효성이 있나요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    네, 매우 높은 신뢰성과 실효성을 보장합니다. 일시불 카드 구매 혹은 오토캐시백 서비스를 가동할 경우 토스나 카카오뱅크 등 인터넷 모바일 금융 앱 제휴 신용카드 이벤트를 관통하면 결제 금액의 최소 1.2퍼센트에서 최대 2.5퍼센트까지 순수 현금 피드백 혜택을 챙길 수 있습니다. 이는 일반적인 대리점 계약 시 딜러에게 유선으로 현금지원을 문의하는 것보다 훨씬 깔끔하고 확실하게 정산금을 보존받는 최적의 수단으로 손꼽힙니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q3. 4세대 미니쿠퍼 C와 미니쿠퍼 S의 출력 및 연비 평균 데이터는 어떠한가요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    4세대 미니쿠퍼 C 모델에는 고출력 효율을 가다듬은 가솔린 2.0 엔진이 적용되어 최고 150마력 전후의 날렵한 시내 가속 능력을 보입니다. 리터당 공인 복합연비는 약 12.5km를 넘나들며 도심과 고속도로 주행 시 상당히 경제적인 비용 지출을 나타냅니다. 반면, 스포츠 성능을 한층 강화한 S 페이버드는 최고 204마력의 심장으로 제로백 6.6초를 마크하며 한 차원 격상된 질주 퍼포먼스를 내세우는 대신, 공인 복합연비는 리터당 12.0km 수준으로 살짝 하향 조정된 차이를 보여줍니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q4. 장기렌트와 자동차 운용리스 방식의 세제 혜택 차이가 궁금합니다. <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    기본적으로 리스와 렌트는 금융사 명의의 자산을 빌려 타며 매월 정기 요금을 손비 처리한다는 맥락은 같습니다. 그러나 세부적으로 들어가면 번호판 부착 방식과 보험 가입 주체에서 뚜렷한 경계선이 나누어집니다. 리스는 개인의 보험 요율을 고스란히 이관하여 지속할 수 있으며 일반 자동차 번호판을 달 수 있다는 특장점이 있지만 개인의 신용대출 부채 계정에 포함되는 불이익이 동반될 수 있습니다. 반면 장기렌트는 하, 허, 호 번호판 부착이 강제되나 월 지출 요금 속에 자동차 보험 비용과 일체의 세금이 전액 포함되어 있어 사고 이력이 많아 개별 수입차 보험료율 산정 시 높은 금액 책정이 부담되는 초보 운전자 및 신규 사업체에 한결 가볍고 안정적인 재무 포트폴리오를 제공합니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q5. 미니 일렉트릭 전기차 모델의 보조금 적용 전후 실제 지출 격차는 평균 얼마인가요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    2026년형 미니 일렉트릭 SE 등급의 정상 권장가는 4,850만 원에 고정되어 있으나 국가 지원 국고보조금과 각 지자체별로 지원하는 차등 전기차 지원 특약 혜택, 그리고 전동화 특별 친환경 감면 프로모션까지 일괄적으로 산출해 보면 대략 서울시 기준 700만 원 안팎, 지방 일부 시군 단위 지역의 경우 최대 1,000만 원 이상까지 부담금이 차감되어 실구매 가격은 놀랍게도 3,000만 원대 중후반 수준으로 대폭 완화되어 일반 내연기관 클래식 트림의 실구매 비용보다 도리어 저렴해지는 마법 같은 예산 절감 효율을 창출하기도 합니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q6. 미니쿠퍼 소모품 교환 비용 및 정비 편의성에 대한 세간의 평가는 어떠한가요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    BMW 그룹 산하의 탄탄한 공식 네트워크를 공유하므로 타 수입 브랜드 대비 정비 및 부품 공급 인프라는 최상급에 속합니다. 특히 신차 출고 고객에게는 일정 기간 엔진오일, 필터류 등의 소모품을 전액 무상 교환 처리해 주는 BSI 프로그램이 포함되어 초반 유지 정비 비용 지출은 0원에 가깝게 제어됩니다. 보증 만료 이후에는 수입차 전문 사설 수리 정비 센터가 활성화되어 있는 편이며 사설 부품 시장의 발달로 인해 자가 정비 난이도 역시 과도하게 악명이 높던 과거 세대들에 비해 체감 비용이 대단히 합리화되었다는 보배드림 후기들을 수월하게 찾을 수 있습니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q7. 첫차로 미니쿠퍼를 선택하려는 초보 드라이버에게 추천할 만한 등급과 안전 옵션은 무엇입니까? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    인생의 첫 차량으로 브랜드를 결정하셨다면 가성비와 주행 편의를 두루 만족시키는 미니쿠퍼 3도어 C 클래식 혹은 5도어 C 클래식 트림을 적극 추천해 드립니다. 4세대 완전변경을 거치며 드라이빙 어시스턴트 기능이 모든 트림에 완벽하게 기조화되어 차선 이탈 경고 및 전방 충돌 방지 시스템이 활성화되었으며, 클래식 이상 트림을 신청하시면 앞차와의 거리를 안전하게 제어해 주는 액티브 크루즈 컨트롤과 주차를 아주 편하게 돕는 서라운드 뷰 옵션이 풍족하게 포함되어 좁은 골목길이나 악천후 시에도 충돌 위험 없이 고품격 안도감을 확보해 줍니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q8. 연식 변경 직전 끝물 할인 재고 모델을 노리는 방식은 실제 얼마만큼의 메리트가 존재하나요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    새로운 연식 모델이나 세대 변경 차량의 한국 유입이 초읽기에 들어간 시즌에는 재고 정리를 목적으로 공식 프로모션의 혜택 강도가 역대급 폭으로 확장됩니다. 통상적인 신규 출시 기간에는 3퍼센트에서 5퍼센트 수준에 그치던 프로모션 할인율이 단숨에 10퍼센트 이상으로 확장되며 수백만 원 단위의 실질 인수 비용을 아낄 수 있는 좌표가 대량 형성됩니다. 감가상각에 무덤덤하고 한 차량을 오랫동안 운용할 실구매 주의자라면 이러한 틈새 재고 털이 이벤트를 노리는 것이 제일 현명하고 실용적인 수입차 성지 가입 방법입니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q9. 미니쿠퍼 JCW 고성능 버전을 일상용 데일리카로 타기에는 과도하게 딱딱하지 않은가요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    역대 JCW 버전에 대한 평가는 항상 노면을 낱낱이 훑어내는 딱딱한 레이싱 카 카테고리로 고정되어 왔으나, 2026년형 4세대에 이르러서는 전자 제어식 가변 댐핑 시스템과 차체 섀시 공학의 개선으로 일상 컴포트 모드 주행 시 중형급 세단만큼은 아닐지언정, 충분한 노면 진동 상쇄 기술력을 선보이며 기분 좋은 패밀리 해치백의 유연함을 선사합니다. 스포츠 주행 모드를 가동했을 때에만 전형적인 다이내믹 피치 현상과 강력한 하체 타이트닝이 개입되므로 일상 정숙 주행과 서킷 주행 두 가지 멀티 성향을 양극단으로 만족스럽게 수행해 줍니다.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q10. 미니쿠퍼를 중고차로 매각할 때 잔존가치와 감가상각 순위 비율은 어떻게 평가되나요? <span class="faq-toggle-btn">열기</span></h3>
+                <p>
+                    미니쿠퍼 제품군은 국내 수입 중고차 시장에서 독자적인 주행 매력과 두터운 여성 및 젊은 직장인 선호도층을 형성하고 있기 때문에 소형 세그먼트 차종 중 잔존 가치가 상위 클래스에 안정적으로 고정되는 대표 차량입니다. 무사고 3년 차 기준 일반적으로 신차 출고가 대비 약 60퍼센트 내외의 양호한 감가 방어율을 보여주며, 외장 컬러가 미니 특유의 영국 레이싱 그린이나 크림 화이트 계열일 경우 중고차 거래소에서 제일 빠른 속도로 처분 성사 좌표가 발생하는 혜택을 톡톡히 볼 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+  
+<script>
+    // Slider Interactive Display Update
+    function updateSliderValue(val) {
+        document.getElementById('sliderValDisplay').innerText = val + '%';
+    }
+
+    // FAQ Accordion Toggle functionality without any broken elements
+    document.querySelectorAll('.faq-item h3').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            const toggleBtn = item.querySelector('.faq-toggle-btn');
+            
+            // Toggle active state for current item
+            parent.classList.toggle('active');
+            
+            // Text feedback for toggle state
+            if (parent.classList.contains('active')) {
+                toggleBtn.innerText = '닫기';
+            } else {
+                toggleBtn.innerText = '열기';
+            }
+        });
+    });
+
+    // Simple Alert for Submit Action (stay time and interactivity tracker)
+    document.getElementById('estimateForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const modelName = document.getElementById('carModel').value;
+        if(!modelName) {
+            alert('인수 희망하시는 미니쿠퍼 세부 모델명을 정확하게 지정해 주세요.');
+            return;
+        }
+        alert('입력해 주신 정보 분석을 통해 최저가 맞춤형 할인 혜택과 금융 견적 상세 결과를 전송해 드리겠습니다. 잠시만 대기해 주시기 바랍니다.');
+    });
+</script>
+  
